@@ -23,3 +23,5 @@ Liberty 2.1 SHM Faucet Contract Address:
 ## No Gas Faucet
 
 Website: https://shardeum-faucet.onrender.com/docs#/default/AppController_sendSHM
+
+Credit: https://github.com/m-r-g-t/shardeum-faucet
