@@ -93,11 +93,21 @@ const contractDefined_JS = new web3.eth.Contract(contractABI_JS, contractAddress
 
 // FUNCTIONS TO RETRIEVE SMART CONTRACT DATA
 
-// //LINK BALANCE
-// chainlinkInterfaceERC20_CONTRACT.methods.balanceOf(contractAddress_JS).call((err, contractLINKbalanceResult) => {
-//   if ((contractLINKbalanceResult/(10**18)) == 0){document.getElementById("getFaucetLinkBalance").innerHTML = "The faucet is empty!"}
-//   else {document.getElementById("getFaucetLinkBalance").innerHTML = contractLINKbalanceResult/(10**18) + " LINK"}
-// });
+async function checkContractBalance() {
+  try {
+      web3.eth.getBalance(contractAddress_JS).then((balanceInWei) => {
+          balance = web3.utils.fromWei(balanceInWei);
+          console.log("Balance in wei:", balanceInWei);
+          console.log("Balance in ETH:", balance);
+          document.getElementById("getFaucetLinkBalance").innerHTML = balanceInWei/(10**18) + " SHM"
+      });
+  } catch (error) {
+      console.log(error);
+  }
+}
+
+checkContractBalance();
+
 
 // MODIFY CONTRACT STATE WITH SET FUNCTION WITH PREDEFINED DATA FROM WEB3.JS
 const changeStateInContractEvent = document.querySelector('.changeStateInContractEvent');
