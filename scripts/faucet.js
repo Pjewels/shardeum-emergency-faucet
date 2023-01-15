@@ -90,6 +90,7 @@ const contractABI_JS = [{"inputs":[],"name":"cooldown","type":"error"},{"inputs"
 
 const contractDefined_JS = new web3.eth.Contract(contractABI_JS, contractAddress_JS)
 
+document.getElementById("getContractAddress").innerHTML = contractAddress_JS
 
 // FUNCTIONS TO RETRIEVE SMART CONTRACT DATA
 
