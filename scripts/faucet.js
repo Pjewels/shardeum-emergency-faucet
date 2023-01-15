@@ -145,6 +145,30 @@ changeStateInContractEvent.addEventListener('click', () => {
 
 });
 
+// Request from the backend faucet
+async function airdropRequest() {
+  detectMetamaskInstalled();
+  checkAddressMissingMetamask();
+  accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+  var account = accounts[0];
+  var address = 'https://shardeum-faucet.onrender.com/sendSHM?address=' + account;
+
+  var xhr = new XMLHttpRequest();
+  xhr.withCredentials = true;
+
+  xhr.addEventListener("readystatechange", function() {
+    if(this.readyState === 4) {
+      console.log(this.responseText);
+      alert(this.responseText);
+    }
+  });
+
+  xhr.open("POST", address);
+  xhr.setRequestHeader("accept", "*/*");
+
+  xhr.send();
+}
+
 // //Get the latest event. Once the event is triggered, website will update value.
 // contractDefined_JS.events.faucetWithdraw({
 //      fromBlock: 'latest'
