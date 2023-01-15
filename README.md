@@ -1,6 +1,6 @@
 # Shardeum Emergency Faucet
 
-## Website Link
+## Gas Faucet
 
 Website (hosted on GitHub pages): https://shardeum.github.io/shardeum-emergency-faucet/
 
