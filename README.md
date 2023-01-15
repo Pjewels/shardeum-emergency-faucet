@@ -16,3 +16,6 @@ or
 
        http-server
 
+Liberty 2.1 SHM Faucet Contract Address:
+
+       0xBB2ddCb509b76963EE152fE2f0CC5f08618d3F25       
