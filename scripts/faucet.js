@@ -92,26 +92,8 @@ const web3 = new Web3(window.ethereum);
 //Now build the contracts with Web3.
 
 // REQUEST LINK FROM FAUCET
-const contractAddress_JS = "0xBB2ddCb509b76963EE152fE2f0CC5f08618d3F25";
-const contractABI_JS = [
-  { inputs: [], name: "cooldown", type: "error" },
-  { inputs: [], name: "faucetNotFunded", type: "error" },
-  {
-    inputs: [],
-    name: "useFaucet",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "address", name: "", type: "address" }],
-    name: "userPreviousWithdrawTime",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  { stateMutability: "payable", type: "receive" },
-];
+const contractAddress_JS = "0x731637A147a2eFEa91Ced8053667DF61C033DcBE";
+const contractABI_JS = [{"inputs":[],"name":"cooldown","type":"error"},{"inputs":[],"name":"faucetNotFunded","type":"error"},{"inputs":[],"name":"useFaucet","outputs":[],"stateMutability":"nonpayable","type":"function"},{"stateMutability":"payable","type":"receive"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"userPreviousWithdrawTime","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}]
 
 const contractDefined_JS = new web3.eth.Contract(
   contractABI_JS,
