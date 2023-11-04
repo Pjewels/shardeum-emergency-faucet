@@ -6,7 +6,7 @@ function detectMetamaskInstalled() {
     ethereum.isMetaMask;
   } catch (missingMetamask) {
     alert(
-      "Metamask not detected in browser! Install Metamask browser extension, then refresh page!"
+      "Metamask not detected in browser! Install Metamask or any other supported browser extension, then refresh page!"
     );
   }
 }
@@ -15,7 +15,7 @@ function detectMetamaskInstalled() {
 function checkAddressMissingMetamask() {
   if (accounts.length == 0) {
     alert(
-      "No address from Metamask found. Click the top button to connect your Metamask account then try again without refreshing the page."
+      "No address from Metamask found. Click the top button to connect your Metamask or any other supported wallet then try again without refreshing the page."
     );
   }
 }
